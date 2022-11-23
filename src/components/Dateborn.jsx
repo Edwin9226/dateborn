@@ -63,14 +63,15 @@ export default function Dateborn() {
       }
       setEdadmesdia(edad + "," + meses + "," + dias);
       }
-
+      const hoy=new Date();
     return (
     <div className='cuadrado'>
      <div className="hijo">
      <DatePicker props={"fecha"} selected={startdate} onChange={(date)=> setStartDate(date)} 
     dateFormat="dd-M-yyyy" showYearDropdown
     yearDropdownItemNumber={50}
-    scrollableYearDropdown/> 
+    scrollableYearDropdown
+    maxDate={hoy}/> 
     
   
     <br/>
